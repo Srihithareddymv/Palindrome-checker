@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class UC10 {
+class UC11 {
 
-    public static boolean isPalindrome(String str) {
+    public boolean checkPalindrome(String str) {
 
-        str = str.replaceAll("\\s", "").toLowerCase();
+        str = str.replaceAll("\\s","").toLowerCase();
 
         int start = 0;
         int end = str.length() - 1;
@@ -19,6 +19,9 @@ public class UC10 {
 
         return true;
     }
+}
+
+public class Main {
 
     public static void main(String[] args) {
 
@@ -27,7 +30,9 @@ public class UC10 {
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        if (isPalindrome(input)) {
+        PalindromeChecker checker = new PalindromeChecker();
+
+        if (checker.checkPalindrome(input)) {
             System.out.println("The string is a Palindrome.");
         } else {
             System.out.println("The string is NOT a Palindrome.");
